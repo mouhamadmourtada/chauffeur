@@ -94,7 +94,6 @@ export default function MapPage() {
             <MapView
                 style={styles.map}
                 initialRegion={region}
-                // onRegionChangeComplete={setRegion}
                 region={region}
             >
                 {markers.map((marker, index) => (
@@ -112,7 +111,6 @@ export default function MapPage() {
                         latitude: location?.coords.latitude || 37.78825,
                         longitude: location?.coords.longitude || -122.4324,
                     }}
-                    // image={{uri: 'https://cdn-icons-png.flaticon.com/512/3089/3089627.png'}}
 
                     title="Ta Position"
                     description="I am here"
@@ -121,18 +119,7 @@ export default function MapPage() {
 
             </MapView>
             <View style = {{height : '20%', backgroundColor : 'white',
-                // il faut ajouter un shadow top
-                shadowColor: "#000",
-                shadowOffset: {
-                    width: 1,
-                    height: 12,
-                },
-                shadowOpacity: 0.58,
-                shadowRadius: 16.00,
-                elevation: 24,
-
-
-            }}>
+                }}>
 
             </View>
         </View>
