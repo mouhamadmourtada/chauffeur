@@ -6,15 +6,17 @@ import {router} from "expo-router"
 const Loader = () => {
 
   useEffect(() => {
-    // checkToken();
+    checkToken();
   }, []);
 
   const checkToken = async () => {
+    // router.navigate('/login'); // Redirection vers la page de connexion si le token n'existe pas
+
     try {
       const token = await SecureStorageService.getValue('token'); // Utilisation du service pour récupérer le token
 
       if (token) {
-        router.navigate('/principal'); // Redirection vers la page principale si le token existe
+        router.navigate('/Principal'); // Redirection vers la page principale si le token existe
       } else {
         router.navigate('/login'); // Redirection vers la page de connexion si le token n'existe pas
       }
