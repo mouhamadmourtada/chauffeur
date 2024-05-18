@@ -2,11 +2,18 @@ import * as SecureStore from 'expo-secure-store';
 const SecureStorageService = {
   getValue: async (key) => {
     try {
+      // il faut verifier que la clé est disponible d'abord
+
+      if(!await SecureStore.isAvailableAsync()) {
+        console.error('SecureStore is not available on this device');
+        return false;
+      }
+
       const value = await SecureStore.getItemAsync(key);
       return value;
     } catch (error) {
-      console.error(`Error getting value for key '${key}':`, error);
-      return null;
+      console.error(error);
+      return false;
     }
   },
 

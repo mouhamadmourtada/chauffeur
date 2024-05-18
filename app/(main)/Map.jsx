@@ -118,8 +118,8 @@ export default function MapPage() {
                 </Marker>
 
             </MapView>
-            <View style = {{height : '20%', backgroundColor : 'white',
-                }}>
+            <View style = {styles.footerMap}>
+                
 
             </View>
         </View>
@@ -134,5 +134,16 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '85%',
     },
+
+    footerMap : {
+        width : '95%',
+        height : '20%',
+        backgroundColor : 'white',
+        // il me faut un shadow
+        boxShadow: '0 10px 10px 0 rgba(0, 0, 0, 0.4)',
+        // border radius top
+        borderTopLeftRadius: 20,
+        // margin : 10
+    }
 });
 

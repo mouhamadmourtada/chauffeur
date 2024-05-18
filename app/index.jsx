@@ -42,14 +42,14 @@ const Loader = () => {
     const checkToken = async () => {
       try {
         const token = await SecureStorageService.getValue('token'); // Utilisation du service pour récupérer le token
-        console.log('token:', token);
+        // console.log('token:', token);
         if (token) {
           router.navigate('/Principal'); // Redirection vers la page principale si le token existe
         } else {
           router.navigate('/login'); // Redirection vers la page de connexion si le token n'existe pas
         }
       } catch (error) {
-        console.error('Error checking token:', error);
+        console.error('Error checking token:');
         router.navigate('/login'); // En cas d'erreur, redirection vers la page de connexion par défaut
       }
     };
