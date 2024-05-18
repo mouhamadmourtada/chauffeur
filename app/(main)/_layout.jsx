@@ -49,9 +49,7 @@ export default function Principal() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer initialRouteName='/Map'/>
-       
-
-        
+               
     </GestureHandlerRootView>
   );
 }
